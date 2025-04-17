@@ -13,10 +13,10 @@
 # 	pygame.display.update()	# update the display
 
 import pygame
-import environment
-import sensor
+import environment as environment
+import sensor as sensor
 
-env = environment.build_environment("map.png", 1200, 600)	# create an environment object with the given image path and width and height
+env = environment.build_environment("images/map.png", 1200, 600)	# create an environment object with the given image path and width and height
 env.original_map = env.map.copy()	# create a copy of the map
 laser = sensor.laser_sensor(200, env.original_map, [0.5, 0.01])	# create a laser sensor object with the given range and map
 
